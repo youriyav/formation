@@ -6,6 +6,10 @@ public class Addition {
     static int soustration(int a, int b){
         return  a-b;
     }
+    static int multiplication(int a, int b){
+        return  a*b;
+    }
+
 
     public static void main(String[] args) {
         int resultat=addition(4,23);
@@ -15,6 +19,6 @@ public class Addition {
         System.out.println(resultat);
         System.out.println(resultat2);
         System.out.println(resultat3);
-        System.out.println(resultat4);
+        System.out.println(resultat4); 
     }
 }
