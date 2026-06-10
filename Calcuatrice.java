@@ -43,7 +43,14 @@ public class Calcuatrice {
             // Creating Scanner object
             scn = new Scanner(System.in);
             System.out.print("veuillez entrer votre choix :");
-            choix = scn.nextInt();
+            try {
+                choix = scn.nextInt();
+            } catch (Exception e) {
+                System.out.println("La valeur entréé est invalide");
+                choix=6;
+            }
+
+            
         }while(choix>4);
         //-------------début------------ 
         int choix_1=1;
@@ -52,19 +59,60 @@ public class Calcuatrice {
         int choix_4=4;
 
     
-        
+        scn = new Scanner(System.in);
         if(choix==choix_1){
-            System.out.print("Vous avez choisi l'addition");
+            System.out.println("Vous avez choisi l'addition");
+            
+            System.out.print("veuillez enter le premier nombre: ");
+            int premier_nombre = scn.nextInt();
+            
+            System.out.print("veuillez enter le second nombre: ");
+            scn = new Scanner(System.in);
+            int second_nombre = scn.nextInt();
+            int resultat= addition(premier_nombre, second_nombre);
+            System.out.print("la somme de "+premier_nombre+" et "+second_nombre+" fait : "+resultat);
+
+
         }
         if(choix==choix_2){
-            System.out.print("Vous avez choisi soustraction");
+           System.out.println("Vous avez choisi la soustraction");
+            System.out.print("veuillez enter le premier nombre: ");
+            int premier_nombre = scn.nextInt();
+            
+            System.out.print("veuillez enter le second nombre: ");
+            scn = new Scanner(System.in);
+            int second_nombre = scn.nextInt();
+            int resultat= soustration(premier_nombre, second_nombre);
+            System.out.print("la différence entre "+premier_nombre+" et "+second_nombre+" fait : "+resultat);
+
+
         }
         if(choix==choix_3){
-            multiplication(choix_3, choix_4)
-            //System.out.print("Vous avez choisi la multiplication");
+            System.out.println("Vous avez choisi la multiplication");
+            System.out.print("veuillez enter le premier nombre: ");
+            int premier_nombre = scn.nextInt();
+            
+            System.out.print("veuillez enter le second nombre: ");
+            scn = new Scanner(System.in);
+            int second_nombre = scn.nextInt();
+            int resultat= multiplication(premier_nombre, second_nombre);
+            System.out.print("la multiplication de  "+premier_nombre+" par "+second_nombre+" fait : "+resultat);
+
+
         }
         if(choix==choix_4){
-            System.out.print("Vous avez choisi division");
+
+            System.out.println("Vous avez choisi la division");
+            System.out.print("veuillez enter le premier nombre: ");
+            int premier_nombre = scn.nextInt();
+            int second_nombre = 0;
+            do{
+                System.out.print("veuillez enter le second nombre: ");
+                scn = new Scanner(System.in);
+                second_nombre = scn.nextInt();
+            }while(second_nombre==0);
+            int resultat= division(premier_nombre, second_nombre);
+            System.out.print("la division de  "+premier_nombre+" par "+second_nombre+" fait : "+resultat);   
         }
         
 

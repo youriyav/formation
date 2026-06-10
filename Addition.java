@@ -12,6 +12,7 @@ public class Addition {
 
 
     public static void main(String[] args) {
+        System.out.println(args[1]);
         int resultat=addition(4,23);
         int resultat2=addition(6,93);
         int resultat3=addition(40,100);
